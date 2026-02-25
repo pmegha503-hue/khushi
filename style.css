@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(135deg, #ffd6e8, #ffb6d9);
+  text-align: center;
+  color: white;
+  overflow-x: hidden;
+}
+
+.hero, .gallery, .message {
+  padding: 80px 20px;
+}
+
+button {
+  padding: 12px 25px;
+  border: none;
+  background: white;
+  color: #ff4da6;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: #ffe6f2;
+}
+
+.hidden {
+  display: none;
+}
+
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.photos img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: 0.5s;
+}
+
+.photos img:hover {
+  transform: scale(1.1);
+}
+
+.cake {
+  font-size: 80px;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+/* Big Teddy */
+.bigTeddy {
+  font-size: 100px;
+  margin-top: 20px;
+  animation: teddyBounce 2s infinite;
+}
+
+@keyframes teddyBounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+/* Butterflies */
+.butterfly {
+  position: fixed;
+  font-size: 28px;
+  animation: fly linear infinite;
+}
+
+@keyframes fly {
+  0% { transform: translateY(100vh) translateX(0); }
+  100% { transform: translateY(-10vh) translateX(200px); }
+}
+
+/* Floating Teddy */
+.teddy {
+  position: fixed;
+  font-size: 35px;
+  bottom: -50px;
+  animation: teddyFloat 10s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes teddyFloat {
+  0% { transform: translateY(0) translateX(0); }
+  100% { transform: translateY(-110vh) translateX(100px); }
+}
+
+/* Floating Hearts */
+.heart {
+  position: fixed;
+  font-size: 20px;
+  bottom: -20px;
+  animation: heartFloat linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes heartFloat {
+  0% { transform: translateY(0) translateX(0); }
+  100% { transform: translateY(-110vh) translateX(50px); }
+}
+
+.fadeIn {
+  animation: fadeSmooth 1s ease-in-out;
+}
+
+@keyframes fadeSmooth {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@media(max-width:600px){
+  .photos img{
+    width: 150px;
+    height: 200px;
+  }
+}
